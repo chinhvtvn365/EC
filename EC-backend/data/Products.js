@@ -1,6 +1,6 @@
 const products = [
   {
-    name: "Velcro Ballerinas For Girls  (Pink)",
+  name: "Love love love",
     image: "/images/6.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -10,7 +10,7 @@ const products = [
     numReviews: 4,
   },
   {
-    name: "Velcro Sneakers For Boys & Girls  (Blue)",
+    name: "Tiktok nè",
     image: "/images/5.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -20,7 +20,7 @@ const products = [
     numReviews: 2,
   },
   {
-    name: "Sesame Street Unisex-Child ELMO Puppet Slipper",
+    name: "Lúa là cây không phải hạt",
     image: "/images/4.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -30,7 +30,7 @@ const products = [
     numReviews: 3,
   },
   {
-    name: "Lace Casual Boots For Boys & Girls  (Tan)",
+    name: "Dưa hấu",
     image: "/images/3.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -40,7 +40,7 @@ const products = [
     numReviews: 9,
   },
   {
-    name: "Lace Walking Shoes For Boys & Girls  (Pink)",
+    name: "Sầu riêng ngâm thuốc",
     image: "/images/2.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -50,7 +50,7 @@ const products = [
     numReviews: 2,
   },
   {
-    name: "Women Red Heels Sandal",
+    name: "Bơ dở nhất thế giới",
     image: "/images/1.png",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",

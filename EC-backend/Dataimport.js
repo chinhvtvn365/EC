@@ -7,6 +7,7 @@ import asyncHandler from "express-async-handler";
 
 const ImportData = express.Router();
 
+// import user
 ImportData.post(
   "/user",
   asyncHandler(async (req, res) => {
@@ -16,6 +17,8 @@ ImportData.post(
   })
 );
 
+
+//import product
 ImportData.post(
   "/products",
   asyncHandler(async (req, res) => {

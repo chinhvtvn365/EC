@@ -4,25 +4,39 @@ import Rating from "../components/homeComponents/Rating";
 import { Link } from "react-router-dom";
 import Message from "./../components/LoadingError/Error";
 import  axios  from 'axios';
+import { useDispatch, useSelector } from "react-redux";
+import { listProductDetails } from "../Redux/Actions/productActions";
+import Loading from './../components/LoadingError/Loading';
 
-
-const SingleProduct = ({ match }) => {
-
-  const [product, setProduct] = useState({});
+const SingleProduct = ({ history, match }) => {
+  const [qty, setQty] = useState(1)
+  const productId = match.params.id
+  const dispatch = useDispatch();
+  const productDetails = useSelector((state) => state.productDetails);
+  const { loading, error, product } = productDetails;
 
   useEffect(() => {
-    const fetchProduct = async () => {
-    const {data} = await axios.get(`/api/products/${match.params.id}`);
-    setProduct(data)
-  }
-  fetchProduct()  
-}, [match])
+    dispatch(listProductDetails(productId))
+}, [dispatch, productId]);
 
+  const addToCardHandle = (e) =>{
+    e.preventDefault()
+    history.push(`/cart/${productId}?qty=${qty}`)
+  }
   return (
     <>
       <Header />
       <div className="container single-product">
-        <div className="row">
+        {
+          loading ? (
+            <Loading/>
+          )
+          : error ? (
+            <Message variant="alert-danger" >{error}</Message>
+          )
+          : (
+            <>
+<div className="row">
           <div className="col-md-6">
             <div className="single-image">
               <img src={product.image} alt={product.name} />
@@ -59,7 +73,8 @@ const SingleProduct = ({ match }) => {
                   <>
                     <div className="flex-box d-flex justify-content-between align-items-center">
                       <h6>Quantity</h6>
-                      <select>
+                      <select value={qty}
+                      onChange={(e) => setQty(e.target.value)} >
                         {[...Array(product.countInStock).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
                             {x + 1}
@@ -67,7 +82,7 @@ const SingleProduct = ({ match }) => {
                         ))}
                       </select>
                     </div>
-                    <button className="round-black-btn">Add To Cart</button>
+                    <button onClick={addToCardHandle} className="round-black-btn">Add To Cart</button>
                   </>
                 ) : null}
               </div>
@@ -132,6 +147,10 @@ const SingleProduct = ({ match }) => {
             </div>
           </div>
         </div>
+            </>
+          )
+        }
+        
       </div>
     </>
   );

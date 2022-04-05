@@ -10,7 +10,7 @@ import {
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
 } from "../Constants/productConstants";
-import { logout } from "./userActions";
+// import { logout } from "./userActions";
 
 // PRODUCT LIST
 export const listProduct =
@@ -51,35 +51,35 @@ export const listProductDetails = (id) => async (dispatch) => {
 };
 
 // PRODUCT REVIEW CREATE
-export const createProductReview =
-  (productId, review) => async (dispatch, getState) => {
-    try {
-      dispatch({ type: PRODUCT_CREATE_REVIEW_REQUEST });
+// export const createProductReview =
+//   (productId, review) => async (dispatch, getState) => {
+//     try {
+//       dispatch({ type: PRODUCT_CREATE_REVIEW_REQUEST });
 
-      const {
-        userLogin: { userInfo },
-      } = getState();
+//       const {
+//         userLogin: { userInfo },
+//       } = getState();
 
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${userInfo.token}`,
-        },
-      };
+//       const config = {
+//         headers: {
+//           "Content-Type": "application/json",
+//           Authorization: `Bearer ${userInfo.token}`,
+//         },
+//       };
 
-      await axios.post(`/api/products/${productId}/review`, review, config);
-      dispatch({ type: PRODUCT_CREATE_REVIEW_SUCCESS });
-    } catch (error) {
-      const message =
-        error.response && error.response.data.message
-          ? error.response.data.message
-          : error.message;
-      if (message === "Not authorized, token failed") {
-        dispatch(logout());
-      }
-      dispatch({
-        type: PRODUCT_CREATE_REVIEW_FAIL,
-        payload: message,
-      });
-    }
-  };
+//       await axios.post(`/api/products/${productId}/review`, review, config);
+//       dispatch({ type: PRODUCT_CREATE_REVIEW_SUCCESS });
+//     } catch (error) {
+//       const message =
+//         error.response && error.response.data.message
+//           ? error.response.data.message
+//           : error.message;
+//       if (message === "Not authorized, token failed") {
+//         dispatch(logout());
+//       }
+//       dispatch({
+//         type: PRODUCT_CREATE_REVIEW_FAIL,
+//         payload: message,
+//       });
+//     }
+//   };

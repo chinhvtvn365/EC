@@ -13,26 +13,26 @@ import {
   userRegisterReducer,
   userUpdateProfileReducer,
 } from "./Reducers/userReducers";
-import {
-  orderCreateReducer,
-  orderDetailsReducer,
-  orderListMyReducer,
-  orderPayReducer,
-} from "./Reducers/orderReducres";
+// import {
+//   orderCreateReducer,
+//   orderDetailsReducer,
+//   orderListMyReducer,
+//   orderPayReducer,
+// } from "./Reducers/orderReducres";
 
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
-  productReviewCreate: productCreateReviewReducer,
+  // productReviewCreate: productCreateReviewReducer,
   cart: cartReducer,
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
-  userDetails: userDetailsReducer,
-  userUpdateProfile: userUpdateProfileReducer,
-  orderCreate: orderCreateReducer,
-  orderDetails: orderDetailsReducer,
-  orderPay: orderPayReducer,
-  orderListMy: orderListMyReducer,
+  // userDetails: userDetailsReducer,
+  // userUpdateProfile: userUpdateProfileReducer,
+  // orderCreate: orderCreateReducer,
+  // orderDetails: orderDetailsReducer,
+  // orderPay: orderPayReducer,
+  // orderListMy: orderListMyReducer,
 });
 
 const cartItemsFromLocalStorage = localStorage.getItem("cartItems")
@@ -44,15 +44,15 @@ const userInfoFromLocalStorage = localStorage.getItem("userInfo")
   ? JSON.parse(localStorage.getItem("userInfo"))
   : null;
 
-// shippingAddress
-const shippingAddressFromLocalStorage = localStorage.getItem("shippingAddress")
-  ? JSON.parse(localStorage.getItem("shippingAddress"))
-  : {};
+// // shippingAddress
+// const shippingAddressFromLocalStorage = localStorage.getItem("shippingAddress")
+//   ? JSON.parse(localStorage.getItem("shippingAddress"))
+//   : {};
 
 const initialState = {
   cart: {
     cartItems: cartItemsFromLocalStorage,
-    shippingAddress: shippingAddressFromLocalStorage,
+    // shippingAddress: shippingAddressFromLocalStorage,
   },
   userLogin: { userInfo: userInfoFromLocalStorage },
 };
