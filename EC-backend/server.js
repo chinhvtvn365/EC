@@ -6,7 +6,7 @@ import ImportData from "./Dataimport.js";
 import productRoute from "./Routes/productRoutes.js";
 import { errorHandler, notFound } from "./Middleware/error.js";
 import userRouter from "./Routes/userRoutes.js";
-
+import orderRouter from "./Routes/orderRoutes.js";
 dotenv.config();
 
 const app = express();
@@ -17,7 +17,11 @@ connectDatabase()
 app.use("/api/import", ImportData)
 app.use("/api/products", productRoute)
 app.use("/api/users", userRouter)
+app.use("/api/orders", orderRouter)
 
+app.get("/api/config/paypal", (req, res) => {
+    res.send(process.env.PAYPAL_CLIENT_ID);
+  });
 app.use(notFound)
 app.use(errorHandler)
 
