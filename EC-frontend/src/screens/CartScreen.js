@@ -52,8 +52,8 @@ const CartScreen = ({ match, location, history }) => {
             </div>
             {/* cartiterm */}
             {
-              cartItems.map((item) => (
-                <div className="cart-iterm row">
+              cartItems.map((item, index) => (
+                <div className="cart-iterm row" key="{index}">
                 <div onClick={() => removeFromCartHandle(item.product)}
                  className="remove-button d-flex justify-content-center align-items-center">
                   <i className="fas fa-times"></i>
