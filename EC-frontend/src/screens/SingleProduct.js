@@ -162,11 +162,11 @@ const SingleProduct = ({ history, match }) => {
                         className="col-12 bg-light p-3 mt-2 border-0 rounded"
                       >
                         <option value="">Select...</option>
-                        <option value="1">1 - Poor</option>
-                        <option value="2">2 - Fair</option>
-                        <option value="3">3 - Good</option>
-                        <option value="4">4 - Very Good</option>
-                        <option value="5">5 - Excellent</option>
+                        <option value="1">1 - Dở</option>
+                        <option value="2">2 - Tệ</option>
+                        <option value="3">3 - Xấu</option>
+                        <option value="4">4 - Tuyệt vời</option>
+                        <option value="5">5 - Đỉnh</option>
                       </select>
                     </div>
                     <div className="my-4">

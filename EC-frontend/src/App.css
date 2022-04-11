@@ -66,7 +66,7 @@ textarea:focus {
 }
 .search-button {
   width: 20%;
-  background-color: black;
+  background-color: #ff22cf;
   color: white;
   border: 0;
   text-transform: uppercase;
@@ -566,11 +566,11 @@ textarea:focus {
   color: #ffffff;
 }
 .cart-buttons a:nth-child(1) button {
-  background-color: #000000;
+  background-color: #a400a7;
 }
 /* FOOTER */
 .footer {
-  background-color: #ececec;
+  background-color: #a978d5;
 }
 .card-name {
   width: 4%;
@@ -651,4 +651,13 @@ textarea:focus {
 .page-item.active .page-link {
   background-color: black;
   border: 1px solid black;
+}
+.alert-info{
+  background-color: #ff9be0;
+}
+.btn-success{
+  background-color: #07d921;
+}
+.btn-success:hover{
+  background-color: #1ce7cb;
 }
