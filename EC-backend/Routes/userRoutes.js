@@ -24,7 +24,7 @@ userRouter.post(
       });
     } else {
       res.status(401);
-      throw new Error("Sai Email or Password");
+      throw new Error("Invalid Email or Password");
     }
   })
 );

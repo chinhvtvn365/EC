@@ -17,7 +17,7 @@ const Header = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (keyword.trim()) {
-      history.push(`/search/${keyword}`);
+      history.push(`/product/search/${keyword}`);
     } else {
       history.push("/");
     }
@@ -25,32 +25,27 @@ const Header = () => {
   return (
     <div>
       {/* Top Header */}
-      <div className="Announcement ">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 d-flex align-items-center display-none">
-              <p>+0337 096 846</p>
-              <p>hixx@gmail.com</p>
-            </div>
-            <div className=" col-12 col-lg-6 justify-content-center justify-content-lg-end d-flex align-items-center">
-              <Link to="">
-                <i className="fab fa-facebook-f"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-instagram"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-linkedin-in"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-youtube"></i>
-              </Link>
-              <Link to="">
-                <i className="fab fa-pinterest-p"></i>
-              </Link>
+      <div className="container-fluid header-nav">
+        <nav className="navbar navbar-expand-lg navbar-light ">
+          <div className="navLeft">
+            <Link to="/" className="navbar-brand" >VesFarm</Link>
+            <p>Clean agricultural products standard vietgap process</p>
+          </div>
+          <div className="navRight">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#vesNav" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon" />
+            </button>
+            <div className="collapse navbar-collapse" id="vesNav">
+              <div className="navbar-nav">
+                <Link to="/" className="nav-link active" >Home</Link>
+                <Link to="/product" className="nav-link" >Product</Link>
+                <Link className="nav-link" to="" >Store</Link>
+                <Link className="nav-link nav-after" to="" >Standard process</Link>
+                <Link to="/cart" className="nav-link" >Cart</Link>
+              </div>
             </div>
           </div>
-        </div>
+        </nav>
       </div>
       {/* Header */}
       <div className="header">
@@ -58,11 +53,9 @@ const Header = () => {
           {/* MOBILE HEADER */}
           <div className="mobile-header">
             <div className="container ">
-              <div className="row ">
+              <div className="row mt-3">
                 <div className="col-6 d-flex align-items-center">
-                  <Link className="navbar-brand" to="/">
-                    <img alt="logo" src="/images/uudam.png" />
-                  </Link>
+
                 </div>
                 <div className="col-6 d-flex align-items-center justify-content-end Login-Register">
                   {
@@ -118,7 +111,7 @@ const Header = () => {
                     <span className="badge">{cartItems.length}</span>
                   </Link>
                 </div>
-                <div className="col-12 d-flex align-items-center">
+                <div className="col-12 d-flex align-items-center header-input">
                 <form onSubmit={submitHandler} className="input-group">
                     <input
                       type="search"
@@ -137,13 +130,11 @@ const Header = () => {
 
           {/* PC HEADER */}
           <div className="pc-header">
-            <div className="row">
+            <div className="row mt-3">
               <div className="col-md-3 col-4 d-flex align-items-center">
-                <Link className="navbar-brand" to="/">
-                  <img alt="logo" src="/images/uudam.png" />
-                </Link>
+
               </div>
-              <div className="col-md-6 col-8 d-flex align-items-center">
+              <div className="col-md-6 col-8 d-flex align-items-center header-input">
               <form onSubmit={submitHandler} className="input-group">
                   <input
                     type="search"

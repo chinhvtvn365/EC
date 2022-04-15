@@ -34,7 +34,7 @@ const CartScreen = ({ match, location, history }) => {
             Your cart is empty
             <Link
               className="btn btn-success mx-5 px-5 py-3"
-              to="/"
+              to="/product"
               style={{
                 fontSize: "12px",
               }}
@@ -93,7 +93,7 @@ const CartScreen = ({ match, location, history }) => {
             </div>
             <hr />
             <div className="cart-buttons d-flex align-items-center row">
-              <Link to="/" className="col-md-6 ">
+              <Link to="/product" className="col-md-6 ">
                 <button>Continue To Shopping</button>
               </Link>
               {

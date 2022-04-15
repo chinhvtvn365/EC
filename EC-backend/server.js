@@ -1,5 +1,4 @@
 import express from "express";
-import products from './data/Products.js';
 import dotenv from "dotenv";
 import connectDatabase from './config/mongodb.js';
 import ImportData from "./Dataimport.js";

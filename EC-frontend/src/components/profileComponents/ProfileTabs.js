@@ -40,12 +40,12 @@ const ProfileTabs = () => {
     // Password match
     if (password !== confirmPassword) {
       if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.error("Sai Password rồi bạn ơi !", Toastobjects);
+        toastId.current = toast.error("Password does not match !", Toastobjects);
       }
     } else {
       dispatch(updateUserProfile({ id: user._id, name, email, password }));
       if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.success("Profile Updated thành công", Toastobjects);
+        toastId.current = toast.success("Profile Updated Success <3", Toastobjects);
       }
     }
   };
