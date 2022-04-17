@@ -6,6 +6,7 @@ body {
   font-size: 16px;
   padding: 0;
   box-sizing: border-box;
+  background-color: #FFFDF6;
 }
 
 a {
@@ -48,9 +49,6 @@ textarea:focus {
   display: block;
 }
 
-.header-nav {
-  background-color: #4df599;
-}
 
 .navbar {
   display: flex;
@@ -223,7 +221,7 @@ textarea:focus {
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-color: #f3fbf7;
+
 }
 
 .shopBack img {
@@ -478,7 +476,7 @@ textarea:focus {
 /* NEWSLATTER */
 .subscribe-section {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.226)),
-    url("https://res.cloudinary.com/trungquandev-com/image/upload/v1649950961/EC/food-vegetables-very-early-harvest-mike-savad_yt6xou.jpg") no-repeat scroll center / cover;
+    url("https://res.cloudinary.com/trungquandev-com/image/upload/v1650127825/EC/278184328_549185576537588_2059397206297704123_n_swqf4i.png") no-repeat scroll center / cover;
   padding: 100px 0 100px;
 }
 
@@ -545,7 +543,7 @@ textarea:focus {
   width: 80%;
   flex-direction: column;
   padding: 40px 0;
-  box-shadow: 0px 0px 27px 0px #6f9557;
+  box-shadow: 0px 0px 27px 0px rgb(225 222 222);
 }
 
 .info-image {
@@ -575,7 +573,6 @@ textarea:focus {
 }
 
 .single-image {
-  background-color: #f3fbf7;
   margin-right: 20px;
   height: 700px;
   display: flex;
@@ -1027,8 +1024,9 @@ textarea:focus {
 }
 
 .alert-info {
-  background-color: #71db4e;
+  background-color: #fff;
   color: #20603D;
+  border-color: #fff;
 }
 
 .btn-success {
@@ -1037,4 +1035,11 @@ textarea:focus {
 
 .btn-success:hover {
   background-color: 084830;
+}
+.btn-group > .show {
+  position: absolute;
+  transform: translate3d(15px, 36px, 0px);
+  top: 0px;
+  left: 0px;
+  will-change: transform;
 }

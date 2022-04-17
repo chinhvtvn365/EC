@@ -39,7 +39,7 @@ const CartScreen = ({ match, location, history }) => {
                 fontSize: "12px",
               }}
             >
-              SHOPPING NOW
+              SHOPPING NOW <i class="fas fa-long-arrow-right"></i>
             </Link>
           </div>
         ) : (

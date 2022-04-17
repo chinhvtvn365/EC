@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./../components/Header";
+import Search from "./../components/homeComponents/Search";
 import ShopSection from "./../components/homeComponents/ShopSection";
 import ContactInfo from "./../components/homeComponents/ContactInfo";
 import CalltoActionSection from "./../components/homeComponents/CalltoActionSection";
@@ -12,6 +13,7 @@ const ProductScreen = ({ match }) => {
   return (
     <div>
       <Header />
+      <Search />
       <ShopSection keyword={keyword} pagenumber={pagenumber} />
       <CalltoActionSection />
       <ContactInfo />

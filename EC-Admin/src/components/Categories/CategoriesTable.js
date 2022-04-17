@@ -28,9 +28,9 @@ const CategoriesTable = () => {
             </td>
             <td>1</td>
             <td>
-              <b>Men clothes</b>
+              <b>Thực phẩm tươi sống</b>
             </td>
-            <td>Men clothes</td>
+            <td>Thực phẩm tươi sống</td>
             <td className="text-end">
               <div className="dropdown">
                 <Link
@@ -59,9 +59,9 @@ const CategoriesTable = () => {
             </td>
             <td>2</td>
             <td>
-              <b>Women fashion</b>
+              <b>Thực phẩm khô</b>
             </td>
-            <td>Fashions for Women</td>
+            <td>Đồ khô</td>
 
             <td className="text-end">
               <div className="dropdown">
@@ -91,9 +91,9 @@ const CategoriesTable = () => {
             </td>
             <td>3</td>
             <td>
-              <b>Kids clothes</b>
+              <b>Sữa tươi</b>
             </td>
-            <td>Clothes for kids</td>
+            <td>Sữa bò</td>
 
             <td className="text-end">
               <div className="dropdown">
